@@ -37,6 +37,7 @@ def predict():
         prediction = model.predict(x_new)[0]
         message = f"The predicted price is {prediction:,.0f} INR!"
     else:
+        
         message = "Please provide valid input details!"
     return render_template("predict.html", title="Predict", form=form, output=message)
 
